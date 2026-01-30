@@ -5,6 +5,8 @@ This project is a **volatility-driven analytical dashboard** built exclusively f
 
 The system converts volatility into **actionable range expectations** across **Daily, Weekly, and Monthly** horizons, enabling probability-based trade structuring rather than directional guessing.
 
+![NIFTY Volatility & Sigma Dashboard](Images/Dashboard.png)
+
 ---
 
 ## Core Objectives
