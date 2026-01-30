@@ -107,7 +107,8 @@ if not access:
 		options.headless = True
 		options.add_argument("--disable-gpu")
 		options.add_argument("--no-sandbox")
-		driver = uc.Chrome(options=options)
+		driver = uc.Chrome(version_main=144, options=options)
+        # driver = uc.Chrome(options=options)
 
 		# driver = uc.Chrome() # Use this line instead to run Chrome in normal (visible) mode, (In that case, comment out the 5 lines above that set headless options)
 
@@ -683,6 +684,7 @@ def update_excel(daily, weekly, monthly, df_ranges, india_vix):
 	daily_sheet.range('K4').value = 'Current Level'
 	daily_sheet.range('K5').value = 'Time Period (Days)'
 	daily_sheet.range('K6').value = 'India Vix'
+	daily_sheet.range('K7').value = 'Enter e to Exit'
 	daily_sheet.range('L2').value = round(-daily[0]*100,2)
 	daily_sheet.range('L3').value = round(daily[1]*100,2)
 	daily_sheet.range('L4').value = round(daily[2]*100,2)
