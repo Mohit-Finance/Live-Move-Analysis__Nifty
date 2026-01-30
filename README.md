@@ -106,17 +106,25 @@ The focus is on **Probability of Profit (PoP)**, not prediction.
 ---
 
 ### 7. Forward Range Projection (Custom Days)
-Based on **current India VIX**, the user can input:
-- Any number of future trading days
+Using the **current India VIX level**, the system allows the user to input **any number of future trading days** (not limited to standard expiries).
 
-The system outputs:
-- Expected move ranges
-- Multiple confidence levels (e.g. 68%, 75%, 90%)
+For the selected horizon, the model computes:
+- Expected price movement ranges
+- **Confidence levels expressed as percentiles (1%–100%)**
 
-This allows **dynamic planning beyond fixed expiries**, useful for:
-- Positional strategies
-- Hedge planning
-- Event risk assessment
+The percentile framework represents the **historical probability** that NIFTY’s price remains within a given range for the specified period, based on volatility scaling and historical distribution behavior.
+
+**Key characteristics**
+- Confidence is not fixed to standard levels (e.g. 68% or 95%)
+- Any percentile can be evaluated (e.g. 60%, 72%, 85%, 93%)
+- Ranges expand monotonically with higher confidence
+
+**Practical applications**
+- Fine-tuned range selection for positional trades
+- Volatility-aware hedge sizing
+- Event-specific risk assessment where custom time horizons are required
+
+This approach enables **continuous probability modeling** rather than discrete confidence buckets, supporting more precise risk and payoff planning.
 
 ---
 
